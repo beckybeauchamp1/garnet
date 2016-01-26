@@ -10,6 +10,7 @@ carol     = FactoryGirl.create(:user, username: "carol")
 adam      = FactoryGirl.create(:user, username: "adam", password: "foo")
 jesse     = FactoryGirl.create(:user, username: "jshawl", github_id:3824954)
 matt      = FactoryGirl.create(:user, username: "mattscilipoti", github_id: '31929')
+becky     = FactoryGirl.create(:user, username: "beckybeauchamp1", github_id: 10798030)
 
 dc = Location.find_by(short_name: "DC")
 wdi = Course.find_by(short_name: "WDI")
@@ -21,7 +22,7 @@ pmi1 = Cohort.create!(name: "PMIDC1", location: dc, course: wdi)
 wdi7.add_admin(adam)
 wdi7.add_admin(jesse)
 wdi7.add_admin(matt) # for attendance
-
+wdi7.add_admin(becky)
 wdi7.add_member(alice)
 wdi7.add_member(bob)
 wdi7.add_member(carol)
